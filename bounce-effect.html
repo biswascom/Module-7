@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Bounch</title>
+    <style>
+        @keyframes sliding {
+            0% {
+                background-color: yellow;
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                top: 160px;
+                background-color: red;
+                transform: scale(.50);
+            }
+
+            50% {
+                top: 0;
+                background-color: yellow;
+                transform: scale(1);
+            }
+
+            75% {
+                top: 160px;
+                background-color: red;
+                transform: scale(.5);
+            }
+            100% {
+                background-color: yellow;
+                left: 450px;
+                top: 0;
+            }
+        }
+
+        .paragraph {
+            margin: 50px auto;
+            font-family: sans-serif;
+            color: grey;
+            background-color: aquamarine;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .box {
+            width: 500px;
+            height: 200px;
+            border: 2px solid;
+            border-radius: 25px;
+            position: relative;
+            margin: auto;
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            position: relative;
+            animation: sliding 2s ease-in-out .5s infinite alternate;
+            animation-play-state: running;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="paragraph">This is animation magic ball using Transform and Transition</h1>
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
